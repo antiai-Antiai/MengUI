@@ -1,26 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Button, { ButtonType, ButtonSize } from  './components/Button/button'
 
 function App() {
-  const a = 2
-  if(a === 2){}
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Button onClick={(e) => {e.preventDefault();alert('ddd')}}> Default </Button>
+      <Button btnType={ButtonType.Primary}>Primary</Button>
+      <Button btnType={ButtonType.Danger}> Danger </Button>
+      <Button disabled> Hello </Button>
+      <Button size={ButtonSize.Small}>small</Button>
+      <Button size={ButtonSize.large}>Large</Button>
+      <Button btnType={ButtonType.Link} href={'http://www.baidu.com'} target="_blank"> Link </Button>
+      <Button btnType={ButtonType.Link} href={'http://www.baidu.com'} disabled> Disabled Link </Button>
     </div>
   );
 }
