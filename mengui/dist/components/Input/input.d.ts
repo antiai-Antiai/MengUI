@@ -12,6 +12,7 @@ export interface InputProps extends Omit<InputHTMLAttributes<HTMLElement>, 'size
     prepend?: string | ReactElement;
     /**添加后缀 用于配置一些固定组合 */
     append?: string | ReactElement;
+    /**添加input框值改变后触发的事件 */
     onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 /**
@@ -19,7 +20,7 @@ export interface InputProps extends Omit<InputHTMLAttributes<HTMLElement>, 'size
  *
  * ~~~js
  * // 这样引用
- * import { Input } from 'mengui'
+ * import { Input } from 'mengqu-ui'
  * ~~~
  * 支持 HTMLInput 的所有基本属性
  */

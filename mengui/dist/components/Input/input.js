@@ -28,7 +28,7 @@ import Icon from '../Icon/icon';
  *
  * ~~~js
  * // 这样引用
- * import { Input } from 'mengui'
+ * import { Input } from 'mengqu-ui'
  * ~~~
  * 支持 HTMLInput 的所有基本属性
  */
@@ -58,5 +58,9 @@ export var Input = function (props) {
             React.createElement(Icon, { icon: icon, title: "title-" + icon })),
         React.createElement("input", __assign({ className: "meng-input-inner", disabled: disabled }, restProps)),
         append && React.createElement("div", { className: "meng-input-group-append" }, append)));
+};
+Input.defaultProps = {
+    disabled: false,
+    size: 'sm'
 };
 export default Input;

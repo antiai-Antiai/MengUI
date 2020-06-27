@@ -1,6 +1,6 @@
 {
   "name": "mengqu-ui",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "private": false,
   "description": "React components library",
   "author": "antiai",
@@ -16,7 +16,7 @@
   "homepage": "http://vikingship.xyz",
   "repository": {
     "type": "git",
-    "url": "https://github.com/antiai-Antiai/MengUI"
+    "url": "https://github.com/antiai-Antiai/MengUI/tree/v1/mengui"
   },
   "files": [
     "dist"

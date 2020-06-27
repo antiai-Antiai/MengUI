@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 declare type MenuMode = 'horizontal' | 'vertical';
 declare type SelectCallback = (selectedIndex: string) => void;
 export interface MenuProps {
@@ -16,5 +16,5 @@ interface IMenuContext {
     defaultOpenSubMenus?: string[];
 }
 export declare const MenuContext: React.Context<IMenuContext>;
-declare const Menu: React.FC<MenuProps>;
+export declare const Menu: FC<MenuProps>;
 export default Menu;

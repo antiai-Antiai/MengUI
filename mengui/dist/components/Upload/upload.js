@@ -20,6 +20,26 @@ import React, { useRef, useState } from 'react';
 import axios from 'axios';
 import UploadList from './uploadList';
 import Dragger from './dragger';
+/**
+ * 页面中最常用的的按钮元素，适合于完成特定的交互
+ * ### 引用方法
+ *
+ * ~~~js
+ * import { Upload } from 'mengqu-ui'
+ * ~~~
+ * ***
+ * ### 示例代码
+ *
+ * ~~~js
+ * <Upload
+      action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+      onChange={action('changed')}
+      onRemove={action('removed')}
+    >
+      <Button btnType="primary"> Upload File </Button>
+    </Upload>
+ * ~~~
+ */
 export var Upload = function (props) {
     var action = props.action, defaultFileList = props.defaultFileList, beforeUpload = props.beforeUpload, onProgress = props.onProgress, onSuccess = props.onSuccess, onError = props.onError, onChange = props.onChange, onRemove = props.onRemove, name = props.name, headers = props.headers, data = props.data, withCredentials = props.withCredentials, accept = props.accept, multiple = props.multiple, children = props.children, drag = props.drag;
     var fileInput = useRef(null);

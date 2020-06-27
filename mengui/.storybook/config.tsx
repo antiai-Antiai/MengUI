@@ -18,7 +18,15 @@ const storyWrapper = (stroyFn: any) => (
 )
 addDecorator(storyWrapper)
 addDecorator(withInfo)
-addParameters({info: { inline: true, header: false}})
+addParameters({
+  info: { 
+    inline: true, 
+    header: false
+  },
+  showNav: true,
+  showRoots: true,
+  isFullscreen: true
+})
 const loaderFn = () => {
   const allExports = [require('../src/welcome.stories.tsx')];
   const req = require.context('../src/components', true, /\.stories\.tsx$/);

@@ -26,6 +26,29 @@ import Input from '../Input/input';
 import Icon from '../Icon/icon';
 import useDebounce from '../../hooks/useDebounce';
 import useClickOutside from '../../hooks/useClickOutside';
+/**
+ * autoComplete 自动不全组件，可用于同步或异步数据不全功能。
+ *
+ * ~~~js
+ * // 这样引用
+ * import { autoComplete } from 'mengqu-ui'
+ * ~~~
+ * 支持 HTMLInput 的所有基本属性
+ * ~~~js
+ * <AutoComplete
+      fetchSuggestions={handleFetch}
+      onSelect={action('selected')}
+      //renderOption={renderOption}
+    />
+
+  const lakers = ['bradley', 'pope', 'caruso', 'cook', 'cousins',
+  'james', 'AD', 'green', 'howard', 'kuzma', 'McGee', 'rando']
+
+  const handleFetch = (query: string) => {
+    return lakers.filter(name => name.includes(query)).map(name => ({value: name}))
+  }
+ * ~~~
+ */
 export var AutoComplete = function (props) {
     var fetchSuggestions = props.fetchSuggestions, onSelect = props.onSelect, value = props.value, renderOption = props.renderOption, restProps = __rest(props, ["fetchSuggestions", "onSelect", "value", "renderOption"]);
     var _a = useState(value), inputValue = _a[0], setInputValue = _a[1];

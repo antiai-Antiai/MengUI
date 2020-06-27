@@ -1,7 +1,7 @@
 import React, { useState, createContext } from 'react';
 import classNames from 'classnames';
 export var MenuContext = createContext({ index: '0' });
-var Menu = function (props) {
+export var Menu = function (props) {
     var className = props.className, mode = props.mode, style = props.style, children = props.children, defaultIndex = props.defaultIndex, onSelect = props.onSelect, defaultOpenSubMenus = props.defaultOpenSubMenus;
     var _a = useState(defaultIndex), currentActive = _a[0], setActive = _a[1];
     var classes = classNames('meng-menu', className, {
