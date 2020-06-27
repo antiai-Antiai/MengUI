@@ -4,6 +4,7 @@ import React from 'react'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import "../src/styles/index.scss"
+import "./inner.scss"
 library.add(fas)
 const wrapperStyle: React.CSSProperties = {
   padding: '20px 40px'
@@ -19,7 +20,7 @@ addDecorator(storyWrapper)
 addDecorator(withInfo)
 addParameters({info: { inline: true, header: false}})
 const loaderFn = () => {
-  const allExports = [];
+  const allExports = [require('../src/welcome.stories.tsx')];
   const req = require.context('../src/components', true, /\.stories\.tsx$/);
   req.keys().forEach(fname => allExports.push(req(fname)));
   return allExports;

@@ -3,8 +3,8 @@ import { render, fireEvent } from '@testing-library/react'
 import Button, { ButtonProps, ButtonType, ButtonSize } from './button'
 
 const testProps: ButtonProps = {
-    btnType: ButtonType.Primary,
-    size: ButtonSize.large,
+    btnType: 'primary',
+    size: 'lg',
     className: 'klass'
 }
 
@@ -30,7 +30,7 @@ describe('test Button component', () => {
     })
 
     it('should render a link when btnType equals link and href is provided', () => {
-        const wrapper = render(<Button btnType={ButtonType.Link} href='http://www.baidu'>Link</Button>)
+        const wrapper = render(<Button btnType='link' href='http://www.baidu'>Link</Button>)
         const element = wrapper.getByText('Link')
         expect(element).toBeInTheDocument()
         expect(element.tagName).toEqual('A')

@@ -7,15 +7,27 @@
 //mixin
 @import "mixin";
 
-//button
+// animation
+@import "animation";
+// button
+
 @import "../components/Button/style";
 
-//menu
+// menu
+
 @import "../components/Menu/style";
 
-//icon
+// icon
 @import "../components/Icon/style";
 
-//animation
-@import "animation";
+//input
+@import "../components/Input/style";
 
+//auto-complete
+@import "../components/AutoComplete/style";
+
+//upload
+@import "../components/Upload/style";
+
+//progress
+@import "../components/Progress/style";

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
+import axios from 'axios'
 import Button from  './components/Button/button'
-import Transition from './components/Transition/transition'
 
 import Menu from './components/Menu/menu'
 import MenuItem from './components/Menu/menuItem'
@@ -13,6 +13,25 @@ library.add(fas)
 
 function App() {
   const [open, setOpen] = useState(true)
+
+  const handleFileChange = (e:React.ChangeEvent<HTMLInputElement>) => {
+    const files = e.target.files
+    console.log(files)
+    if(files){
+      const uploadedFile = files[0]
+      const formData = new FormData()
+      formData.append(uploadedFile.name, uploadedFile)
+      axios.post("http://jsonplaceholder.typicode.com/posts", formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      }).then(resp => {
+        console.log(resp)
+      }).catch(err => {
+        console.log(err)
+      })
+    }
+  }
   return (
     <div>
       {/* Button */}
@@ -55,22 +74,11 @@ function App() {
       <section className="icon">
         <Icon icon="arrow-down" theme="primary" size="4x"/>
       </section>
-      {/* transition */}
-      <section className="transition">
-        <Button onClick={() => {setOpen(!open)}} btnType="primary">Toggle</Button>
-        <Transition
-          in={open}
-          timeout={300}
-          animation="zoom-in-top">
-          <div>
-            <p> this is my animation components </p>
-            <p> this is my animation components </p>
-            <p> this is my animation components </p>
-            <p> this is my animation components </p>
-            <p> this is my animation components </p>
-            <Button size="sm">animations</Button>
-          </div>
-        </Transition>
+      {/* form */}
+      <section className="form">
+        <div>
+            <input type="file" name="myFile" onChange={handleFileChange}/>
+        </div>
       </section>
     </div>
   );
