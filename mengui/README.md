@@ -27,4 +27,4 @@ import { Button } from 'mengqu-ui'
 
 ## 更多
 
-如果你想了解更多，[点击这里](http://www.antiai.com)，查看我们的官网手册。
+如果你想了解更多，[点击这里](http://meng.wonderful.ren)，查看我们的官网手册。
