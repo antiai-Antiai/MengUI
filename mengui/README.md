@@ -11,15 +11,15 @@ npm i mengqu-ui
 ```
 
 ### 使用方式
-####1、全局引入css
+#### 1、全局引入css
 ```
 import 'mengqu-ui/dist/index.css'
 ```
-####2、按需引入组件
+#### 2、按需引入组件
 ```
 import { Button } from 'mengqu-ui'
 ```
-####3、在组件中使用
+#### 3、在组件中使用
 ```
 <Button btnType="danger">primary</Button>
 ```
