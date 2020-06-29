@@ -25,6 +25,62 @@ import { Button } from 'mengqu-ui'
 ```
 
 
-## 更多
+## 组件列表
 
-如果你想了解更多，[点击这里](http://meng.wonderful.ren)，查看我们的官网手册。
+### 一、Button
+#### 引入方式
+```
+    import { Button } from 'mengqu-ui'
+```
+#### 使用方式
+```
+    <Button>Button</Button>
+```
+#### 参数列表
+<table>
+    <tr>
+        <td>属性值</td>
+        <td>值类型</td>
+        <td>是否必传</td>
+        <td>默认值</td>
+        <td>描述</td>
+    </tr>
+    <tr>
+        <td>className</td>
+        <td>string</td>
+        <td>-</td>
+        <td>-</td>
+        <td>设置 Button 的自定义类名</td>
+    </tr>
+    <tr>
+        <td>disabled</td>
+        <td>boolean</td>
+        <td>-</td>
+        <td>false</td>
+        <td>设置 Button 的禁用</td>
+    </tr>
+    <tr>
+        <td>size</td>
+        <td>"lg"、"sm"</td>
+        <td>-</td>
+        <td>false</td>
+        <td>设置 Button 的禁用</td>
+    </tr>
+    <tr>
+        <td>btnType</td>
+        <td>oneOf "primary" | "default" | "danger" | "link"</td>
+        <td>-</td>
+        <td>false</td>
+        <td>设置 Button 的禁用</td>
+    </tr>
+    <tr>
+        <td>href</td>
+        <td>string</td>
+        <td>-</td>
+        <td>-</td>
+        <td>为链接按钮时，按钮链接</td>
+    </tr>
+</table>
+
+
+
